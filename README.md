@@ -20,11 +20,11 @@ lastname,firstname,surname,organization,position,phone,email
 
 Ваша задача:
 
-Поместить Фамилию, Имя и Отчество человека в поля lastname, firstname и surname соответственно. 
+1. Поместить Фамилию, Имя и Отчество человека в поля lastname, firstname и surname соответственно. 
 
-В записной книжке изначально может быть Ф + ИО, ФИО, а может быть сразу правильно: Ф+И+О. 
+2. В записной книжке изначально может быть Ф + ИО, ФИО, а может быть сразу правильно: Ф+И+О. 
 
-Подсказка: работайте со срезом списка (три первых элемента) при помощи " ".join([:2]) и split(" "), регулярки здесь НЕ НУЖНЫ.
+3. Подсказка: работайте со срезом списка (три первых элемента) при помощи " ".join([:2]) и split(" "), регулярки здесь НЕ НУЖНЫ.
 
 Привести все телефоны в формат +7(999)999-99-99. Если есть добавочный номер, формат будет такой: +7(999)999-99-99 доб.9999. 
 
@@ -34,7 +34,7 @@ lastname,firstname,surname,organization,position,phone,email
 
 from pprint import pprint
 
-# читаем адресную книгу в формате CSV в список contacts_list
+ (читаем адресную книгу в формате CSV в список contacts_list)
 
 "import csv
 with open("phonebook_raw.csv", encoding="utf-8") as f:
@@ -42,13 +42,18 @@ with open("phonebook_raw.csv", encoding="utf-8") as f:
   contacts_list = list(rows)
 pprint(contacts_list)"
 
-# TODO 1: выполните пункты 1-3 ДЗ
+TODO 1: выполните пункты 1-3 ДЗ
 
-# ваш код
+ваш код
 
-# TODO 2: сохраните получившиеся данные в другой файл
-# код для записи файла в формате CSV
+TODO 2: сохраните получившиеся данные в другой файл
+
+код для записи файла в формате CSV
+
 with open("phonebook.csv", "w", encoding="utf-8") as f:
+
   datawriter = csv.writer(f, delimiter=',')
-  # Вместо contacts_list подставьте свой список
+  
+  (Вместо contacts_list подставьте свой список)
+  
   datawriter.writerows(contacts_list)
